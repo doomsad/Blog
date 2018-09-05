@@ -34,7 +34,8 @@ td,th{
 </table>
 <hr>
 <a href="/blogs/{{$blog->id}}/edit" class="btn btn-default">Edit Blog</a>
-{!!Form::open(['action'=>['BlogsController@destroy',$blog->id],'method'=>'POST','class'=>'pull-right'])!!}
+<br></br>
+{!!Form::open(['action'=>['BlogsController@destroy',$blog->id],'method'=>'POST'])!!}
 
 {{Form::hidden('_method','DELETE')}}
 {{Form::submit('Delete Blog',['class'=>'btn btn-danger'])}}
